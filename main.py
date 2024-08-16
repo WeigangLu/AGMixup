@@ -12,13 +12,7 @@ import json
 
 
 def seed_setting(args, i):
-    seeds_dict = {
-        "cora" : (2870,4439,3067,2743,2830,5608,1288,1743,2698,3431),
-        "citeseer" : (2798,1348,3581,2448,2912,1070,2469,1308,1039,1841),
-        "pubmed" : (3253,2173,168,1011,1059,503,3006,3098,3194,1897)
-    }
-
-    seed = seeds_dict[args.dataset][i]
+    seed = i*10 + 1
     if seed > 0:
         random.seed(seed)
         np.random.seed(seed)
